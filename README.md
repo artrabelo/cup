@@ -14,12 +14,12 @@ It's a project still in development and it is yet to mature, so feel free to lea
 
 #### Basic commands
 
-Running cup without arguments will show your saved notes or a quick tutorial if you don't have any notes yet.
+Running cup without arguments will show your saved notes or help you to create your first note.
 
 Creating a new note is as easy as `cup add [your note]`. This is the simplest way to work with cup. You can also provide a title with `-t`.
 
 ```console
-~$ cup.py add "This looks like an article!" -t "First blog post"
+~$ python3 cup.py add "This looks like an article!" -t "First blog post"
 Note created.
 
 (1) 2022-01-26 - First blog post
@@ -28,7 +28,7 @@ Note created.
 You can also add a multiline text by pressing `Enter` or `Return` in the terminal after a open quotation mark.
 
 ```console
-~$ cup.py add "The moth don't care
+~$ python3 cup.py add "The moth don't care
 > when he
 > sees the flame"
 ```
@@ -47,7 +47,7 @@ Last updated: 2022-01-26, 18:13.
 
 #### What it eats
 
-`cup` uses a JSON file to store notes. This makes it easy to group your notes by topic and import/export them. It looks like this:
+`cup` uses a JSON file to store notes that looks like this:
 
 ```json
 {
@@ -59,7 +59,7 @@ Last updated: 2022-01-26, 18:13.
 			"id": 1,
 			"created": 20220126141024,
 			"title": "Example", 
-			"text": "First note"
+			"content": "First note"
 		}
 	]
 }
@@ -67,5 +67,6 @@ Last updated: 2022-01-26, 18:13.
 
 ### To-do
 
+* Add support to create and switch notebooks
 * Add support for to-do lists
 * Add support for text files
